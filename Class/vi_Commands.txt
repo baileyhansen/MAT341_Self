@@ -1,0 +1,13 @@
+vi Commands
+
+vi [name].txt: creates the file
+
+i to start editing 
+
+esc to stop editing
+
+:# brings you to that specific line number
+
+:w saves the file and edits
+
+:q to quit and get out of the file 
