@@ -2,4 +2,22 @@ Notes on Terminal Commands
 
 ls: lists every file/folder in directory 
 
-cd: 
+ls -a: lists all the files/folders/hidden files in a directory
+
+cd [folder name]: change directory to that folder
+
+pwd: lists the folders that you are in
+
+cd..: moves up a directory
+
+mkdir [name]: makes a folder 
+
+rm [name]: removes the file of that name
+
+rm -r [folder name]: removes the folder of that name
+
+cp [file 1] [file 2]: copies the first file to a new second file
+
+cp -r [folder name 1] [folder name 2]: copies the entire first folder to the new folder
+
+ 
