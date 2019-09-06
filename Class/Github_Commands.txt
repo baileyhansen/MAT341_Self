@@ -6,3 +6,12 @@ Stage Commit and Push to Github
 
 3. git push
 
+if it asks for an email:
+git config --golbal user.email "email"
+git config --global user.name "github name"
+
+git pull: to get the files from github into the file (must first be in the correct directory
+
+git clone [github-webaddress]: clones repositories
+
+
