@@ -1,0 +1,29 @@
+function N= Newtons_2D_Opt(tol)
+x0= [-0.25; 0.25]; %given initial point
+x1= [0; 0];%[-4.5;4.5];%picked new point
+err= 1; %error to get into the loop
+count= 0;
+
+while err > tol
+    x1 = x0 -H(x0(1), x0(2)) * gradf(x0(1), x0(2));
+    err= sqrt((x1-x0).' *(x1- x0));
+    x0= x1;
+    count= count+ 1;
+end 
+x1 
+N= count
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+function val= gradf(x,y)
+val= [-cos(x); sin(y)];
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+function val= H(x,y)
+val = inv([sin(x) 0; 0 cos(y)]);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%ANSWERS
+% a) The initial guess results in 1e-8 accuracy after 5 iterations. The
+% minima it found is -4.7124 and 0.
+%
+% b)When the initial guess changes it still takes 5 iterations to achieve
+% 1e-8 accuracy. The minima it found is -4.7124 and 0. 
