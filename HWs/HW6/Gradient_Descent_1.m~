@@ -1,0 +1,24 @@
+function N= Gradient_Descent_1(tol, gamma)
+err= 1;
+count= 0;
+A= [1; 1.5];
+
+while err > tol
+    B= A - gamma * gradf(A(1), A(2));
+    err= sqrt((B-A).' *(B-A));
+    A=B;
+    count= count+1;
+end
+A
+count
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+function val= gradf(x,y)
+val= [-cos(x); sin(y)];
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%ANSWERS
+% a) With the given initial point it takes 35 iterations to achieve 1e-10
+% accuracy with a gamma of 0.5. 
+% b) Using the given init
+    

@@ -1,0 +1,16 @@
+function vary_StepSize_Gamma_To_Optimize()
+count=0 
+A= [0.1:0.02:1.5];
+for i= 1:length(A)
+    gradient1(i)= Gradient_Descent_1(A(i));
+end 
+
+%creating the graph
+%this will graph the number of iterations and the error tolerance
+%r indicates red for the gradient2 and b indicates blue for gradient1
+%5 is the line width
+semilogx(A, gradient1, 'b', errTolVec, gradient2, 'r', 'LineWidth', 5);
+xlabel('Error Tolerance, tol'); %labeling the x-axis
+ylabel('Number of Iterations,N'); %labeling the y-axis
+%this adds a legend to the graph
+legend('Fixed Step', 'Barzilai-Borwein');
